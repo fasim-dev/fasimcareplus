@@ -1,0 +1,2663 @@
+/* ===== FASIMCARE+ B2B MARKETPLACE STYLES ===== */
+/* Version: 8.0.0 - TOKOPEDIA/SHOPEE UI STYLE */
+
+/* ==================== MARKETPLACE CONTAINER ==================== */
+.marketplace-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F5F5F5;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.dark-mode .marketplace-container {
+    background: #0F172A;
+}
+
+/* ==================== HEADER ==================== */
+.marketplace-container .marketplace-header {
+    background: linear-gradient(135deg, #0284C7, #38BDF8);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 56px;
+}
+
+.marketplace-container .marketplace-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.3px;
+}
+
+.marketplace-container .marketplace-header p {
+    font-size: 9px;
+    color: #BAE6FD;
+    margin: 0;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.marketplace-container .marketplace-header-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.marketplace-container .marketplace-header-icon {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.marketplace-container .marketplace-header-icon:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.marketplace-container .marketplace-cart-badge,
+.marketplace-container .marketplace-wishlist-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #EF4444;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid white;
+}
+
+.marketplace-container .btn-icon {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* ==================== TABS (Seperti Shopee/Tokopedia) ==================== */
+.marketplace-container .marketplace-tabs {
+    display: flex;
+    background: white;
+    padding: 0;
+    border-bottom: 1px solid #E8E8E8;
+    flex-shrink: 0;
+}
+
+.dark-mode .marketplace-container .marketplace-tabs {
+    background: #1E293B;
+    border-bottom-color: #334155;
+}
+
+.marketplace-container .marketplace-tab {
+    flex: 1;
+    padding: 14px 0;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #666666;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.dark-mode .marketplace-container .marketplace-tab {
+    color: #94A3B8;
+}
+
+.marketplace-container .marketplace-tab.active {
+    color: #0EA5E9;
+}
+
+.marketplace-container .marketplace-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #0EA5E9;
+}
+
+/* ==================== CATEGORIES (Scroll Horizontal) ==================== */
+.marketplace-container .marketplace-categories {
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    background: white;
+    border-bottom: 1px solid #E8E8E8;
+    flex-shrink: 0;
+    scrollbar-width: thin;
+}
+
+.dark-mode .marketplace-container .marketplace-categories {
+    background: #1E293B;
+    border-bottom-color: #334155;
+}
+
+.marketplace-container .marketplace-categories::-webkit-scrollbar {
+    height: 3px;
+}
+
+.marketplace-container .category-btn {
+    padding: 8px 18px;
+    border-radius: 40px;
+    border: 1px solid #E8E8E8;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333333;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.dark-mode .marketplace-container .category-btn {
+    background: #1E293B;
+    border-color: #334155;
+    color: #CBD5E1;
+}
+
+.marketplace-container .category-btn.active {
+    background: #0EA5E9;
+    border-color: #0EA5E9;
+    color: white;
+}
+
+/* ==================== SEARCH ==================== */
+.marketplace-container .marketplace-search {
+    padding: 12px 16px;
+    background: white;
+    border-bottom: 1px solid #E8E8E8;
+    flex-shrink: 0;
+}
+
+.dark-mode .marketplace-container .marketplace-search {
+    background: #1E293B;
+    border-bottom-color: #334155;
+}
+
+.marketplace-container .search-container {
+    display: flex;
+    align-items: center;
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 0 12px;
+    border: 1px solid #E8E8E8;
+}
+
+.dark-mode .marketplace-container .search-container {
+    background: #0F172A;
+    border-color: #334155;
+}
+
+.marketplace-container .search-container i {
+    color: #999999;
+    font-size: 16px;
+}
+
+.marketplace-container .search-container input {
+    flex: 1;
+    padding: 12px 8px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .search-container input {
+    color: #F8FAFC;
+}
+
+.marketplace-container .search-container input::placeholder {
+    color: #999999;
+}
+
+.marketplace-container .search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999999;
+    padding: 8px;
+}
+
+/* ==================== PRODUCT GRID (2 Kolom seperti Tokopedia) ==================== */
+.marketplace-container .marketplace-products {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    background: #F5F5F5;
+}
+
+.dark-mode .marketplace-container .marketplace-products {
+    background: #0F172A;
+}
+
+.marketplace-container .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .marketplace-container .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+.marketplace-container .product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #E8E8E8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.dark-mode .marketplace-container .product-card {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+.marketplace-container .product-card:active {
+    transform: scale(0.98);
+}
+
+.marketplace-container .product-image-container {
+    position: relative;
+    background: #F5F5F5;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marketplace-container .product-image {
+    font-size: 52px;
+}
+
+.marketplace-container .premium-badge-product {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #4A3000;
+    padding: 3px 8px;
+    border-radius: 16px;
+    font-size: 9px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.marketplace-container .wishlist-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.95);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dark-mode .marketplace-container .wishlist-btn {
+    background: rgba(30,41,59,0.95);
+}
+
+.marketplace-container .product-info {
+    padding: 12px;
+}
+
+.marketplace-container .product-title h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dark-mode .marketplace-container .product-title h4 {
+    color: #F8FAFC;
+}
+
+.marketplace-container .product-supplier {
+    font-size: 10px;
+    color: #999999;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.marketplace-container .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #F59E0B;
+    margin-bottom: 6px;
+}
+
+.marketplace-container .product-rating span {
+    color: #999999;
+    font-size: 10px;
+}
+
+.marketplace-container .product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0EA5E9;
+    margin: 8px 0 4px;
+}
+
+.marketplace-container .product-old-price {
+    font-size: 11px;
+    text-decoration: line-through;
+    color: #999999;
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.marketplace-container .product-moq {
+    font-size: 10px;
+    color: #999999;
+    margin-bottom: 8px;
+}
+
+.marketplace-container .product-card .btn-whatsapp-buy {
+    width: 100%;
+    padding: 8px;
+    font-size: 11px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+/* ==================== BUTTONS (Seperti Marketplace) ==================== */
+.marketplace-container .btn-whatsapp-buy {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.marketplace-container .btn-whatsapp-buy:active {
+    transform: scale(0.97);
+    background: #128C7E;
+}
+
+.marketplace-container .btn-whatsapp-large {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.marketplace-container .btn-add-to-cart {
+    background: #0EA5E9;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.marketplace-container .btn-add-to-cart:active {
+    transform: scale(0.97);
+    background: #0284C7;
+}
+
+.marketplace-container .btn-start-shopping {
+    background: #0EA5E9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.marketplace-container .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #10B98120;
+    color: #10B981;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+/* ==================== BOTTOM SHEET MODAL (Seperti Shopee) ==================== */
+.marketplace-container .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.marketplace-container .modal-content {
+    background: white;
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+}
+
+.dark-mode .marketplace-container .modal-content {
+    background: #1E293B;
+}
+
+.marketplace-container .modal-content::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #DDDDDD;
+    border-radius: 4px;
+    margin: 12px auto 8px;
+}
+
+.marketplace-container .modal-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid #E8E8E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.dark-mode .marketplace-container .modal-header {
+    background: #1E293B;
+    border-bottom-color: #334155;
+}
+
+.marketplace-container .modal-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .modal-header h3 {
+    color: #F8FAFC;
+}
+
+.marketplace-container .modal-close {
+    background: #F5F5F5;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: #666666;
+}
+
+.marketplace-container .modal-close:active {
+    transform: scale(0.94);
+    background: #E8E8E8;
+}
+
+.dark-mode .marketplace-container .modal-close {
+    background: #334155;
+    color: #CBD5E1;
+}
+
+.marketplace-container .modal-body {
+    padding: 16px;
+}
+
+/* Info Supplier di Modal */
+.marketplace-container .modal-supplier-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.marketplace-container .modal-supplier-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.marketplace-container .modal-supplier-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .modal-supplier-name {
+    color: #F8FAFC;
+}
+
+/* Discount Badge */
+.marketplace-container .discount-badge {
+    background: #FFF0F0;
+    padding: 4px 10px;
+    border-radius: 16px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.marketplace-container .discount-badge span {
+    color: #E91E63;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+/* Product Description */
+.marketplace-container .product-description {
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+.dark-mode .marketplace-container .product-description {
+    color: #94A3B8;
+}
+
+/* Detail Box */
+.marketplace-container .detail-box {
+    background: #F8F8F8;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.dark-mode .marketplace-container .detail-box {
+    background: #0F172A;
+}
+
+.marketplace-container .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.marketplace-container .detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.marketplace-container .detail-label {
+    font-weight: 500;
+    color: #666666;
+}
+
+.dark-mode .marketplace-container .detail-label {
+    color: #94A3B8;
+}
+
+.marketplace-container .detail-value {
+    color: #333333;
+    font-weight: 500;
+}
+
+.dark-mode .marketplace-container .detail-value {
+    color: #F8FAFC;
+}
+
+.marketplace-container .detail-price {
+    color: #0EA5E9;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.marketplace-container .detail-old-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #999999;
+    margin-right: 6px;
+    font-weight: 400;
+}
+
+/* Quantity Selector */
+.marketplace-container .quantity-section {
+    margin-bottom: 16px;
+}
+
+.marketplace-container .quantity-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .quantity-label {
+    color: #CBD5E1;
+}
+
+.marketplace-container .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marketplace-container .quantity-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #DDDDDD;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dark-mode .marketplace-container .quantity-btn {
+    background: #1E293B;
+    border-color: #475569;
+    color: white;
+}
+
+.marketplace-container .quantity-input {
+    width: 70px;
+    text-align: center;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #DDDDDD;
+    background: white;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dark-mode .marketplace-container .quantity-input {
+    background: #1E293B;
+    border-color: #475569;
+    color: white;
+}
+
+/* Total Price */
+.marketplace-container .total-price {
+    background: #0EA5E910;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.marketplace-container .total-price span:first-child {
+    font-weight: 500;
+    font-size: 13px;
+    color: #666666;
+}
+
+.marketplace-container .total-price span:last-child {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0EA5E9;
+    margin-left: 8px;
+}
+
+/* Modal Actions */
+.marketplace-container .modal-actions {
+    padding: 12px 16px 20px;
+    border-top: 1px solid #E8E8E8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    position: sticky;
+    bottom: 0;
+}
+
+.dark-mode .marketplace-container .modal-actions {
+    background: #1E293B;
+    border-top-color: #334155;
+}
+
+.marketplace-container .modal-actions .btn-whatsapp-large,
+.marketplace-container .modal-actions .btn-add-to-cart {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.marketplace-container .modal-actions .btn-outline {
+    background: transparent;
+    border: 1px solid #DDDDDD;
+    color: #666666;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.dark-mode .marketplace-container .modal-actions .btn-outline {
+    border-color: #475569;
+    color: #CBD5E1;
+}
+
+.marketplace-container .footer-modal-content {
+    padding: 16px;
+    white-space: pre-wrap;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.dark-mode .marketplace-container .footer-modal-content {
+    color: #CBD5E1;
+}
+
+/* ==================== CART ==================== */
+.marketplace-container .cart-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #E8E8E8;
+}
+
+.dark-mode .marketplace-container .cart-item {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+.marketplace-container .cart-item-content {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.marketplace-container .cart-item-image {
+    width: 60px;
+    height: 60px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.marketplace-container .cart-item-details {
+    flex: 1;
+}
+
+.marketplace-container .cart-item-title h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .cart-item-title h4 {
+    color: #F8FAFC;
+}
+
+.marketplace-container .cart-item-supplier {
+    font-size: 10px;
+    color: #999999;
+    margin-bottom: 8px;
+}
+
+.marketplace-container .cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marketplace-container .cart-qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dark-mode .marketplace-container .cart-qty-btn {
+    background: #1E293B;
+    border-color: #475569;
+    color: white;
+}
+
+.marketplace-container .cart-qty-value {
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.marketplace-container .cart-item-total {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0EA5E9;
+}
+
+.marketplace-container .cart-remove-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #EF4444;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.marketplace-container .cart-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 12px;
+    border: 1px solid #E8E8E8;
+}
+
+.dark-mode .marketplace-container .cart-summary {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+.marketplace-container .cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.marketplace-container .cart-checkout-btn {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.marketplace-container .checkout-note {
+    font-size: 10px;
+    color: #999999;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ==================== EMPTY STATE ==================== */
+.marketplace-container .empty-state-marketplace {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.marketplace-container .empty-state-marketplace i {
+    font-size: 56px;
+    color: #CCCCCC;
+    margin-bottom: 16px;
+}
+
+.marketplace-container .empty-state-marketplace p {
+    color: #999999;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/* ==================== FOOTER ==================== */
+.marketplace-container .marketplace-footer {
+    background: white;
+    border-top: 1px solid #E8E8E8;
+    padding: 10px 12px 14px;
+    flex-shrink: 0;
+}
+
+.dark-mode .marketplace-container .marketplace-footer {
+    background: #1E293B;
+    border-top-color: #334155;
+}
+
+.marketplace-container .footer-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+
+.marketplace-container .footer-scroll-container::-webkit-scrollbar {
+    height: 2px;
+}
+
+.marketplace-container .footer-grid {
+    display: inline-flex;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.marketplace-container .footer-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    min-width: 50px;
+}
+
+.marketplace-container .footer-item:active {
+    background: #F5F5F5;
+}
+
+.dark-mode .marketplace-container .footer-item:active {
+    background: #334155;
+}
+
+.marketplace-container .footer-item i {
+    font-size: 16px;
+    color: #0EA5E9;
+}
+
+.marketplace-container .footer-item span {
+    font-size: 9px;
+    color: #666666;
+}
+
+.dark-mode .marketplace-container .footer-item span {
+    color: #CBD5E1;
+}
+
+.marketplace-container .verification-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 8px;
+    margin-top: 4px;
+    border-top: 1px solid #E8E8E8;
+}
+
+.dark-mode .marketplace-container .verification-banner {
+    border-top-color: #334155;
+}
+
+.marketplace-container .verification-badge-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #E8F5E9;
+    padding: 4px 10px;
+    border-radius: 16px;
+}
+
+.dark-mode .marketplace-container .verification-badge-footer {
+    background: #064E3B;
+}
+
+.marketplace-container .verification-badge-footer i {
+    font-size: 10px;
+    color: #10B981;
+}
+
+.marketplace-container .verification-badge-footer span {
+    font-size: 9px;
+    font-weight: 600;
+    color: #10B981;
+}
+
+.marketplace-container .copyright {
+    font-size: 9px;
+    color: #999999;
+}
+
+/* ==================== SUPPLIER PREMIUM ==================== */
+.marketplace-container .premium-suppliers-list {
+    padding: 8px;
+}
+
+.marketplace-container .premium-suppliers-list > h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0EA5E9;
+}
+
+.marketplace-container .premium-supplier-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #FFD70008, #FFA50008);
+    border-radius: 12px;
+    border: 1px solid #FFD70030;
+    cursor: pointer;
+}
+
+.marketplace-container .premium-supplier-avatar {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.marketplace-container .premium-supplier-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.marketplace-container .premium-supplier-content h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.marketplace-container .premium-supplier-content .premium-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #4A3000;
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-size: 8px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.marketplace-container .premium-supplier-content > p {
+    font-size: 10px;
+    color: #999999;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.marketplace-container .premium-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.marketplace-container .premium-stats span {
+    font-size: 9px;
+    color: #999999;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.marketplace-container .premium-supplier-card .btn-whatsapp-buy {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 10px;
+    border-radius: 8px;
+}
+
+/* ==================== WISHLIST & ORDER ==================== */
+.marketplace-container .wishlist-item,
+.marketplace-container .order-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #E8E8E8;
+}
+
+.dark-mode .marketplace-container .wishlist-item,
+.dark-mode .marketplace-container .order-item {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+.marketplace-container .wishlist-item-image {
+    width: 55px;
+    height: 55px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.marketplace-container .wishlist-item-info {
+    flex: 1;
+}
+
+.marketplace-container .wishlist-item-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .wishlist-item-title {
+    color: #F8FAFC;
+}
+
+.marketplace-container .wishlist-item-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0EA5E9;
+}
+
+.marketplace-container .order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.marketplace-container .order-id {
+    font-size: 11px;
+    font-weight: 600;
+    color: #0EA5E9;
+    font-family: monospace;
+}
+
+.marketplace-container .order-status {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #FFF3E0;
+    color: #F59E0B;
+}
+
+.marketplace-container .order-date {
+    font-size: 10px;
+    color: #999999;
+    margin-bottom: 6px;
+}
+
+.marketplace-container .order-total {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.dark-mode .marketplace-container .order-total {
+    color: #F8FAFC;
+}
+
+/* ==================== SUPPLIER STATS ==================== */
+.marketplace-container .supplier-stats {
+    background: #F8F8F8;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 16px 0;
+}
+
+.dark-mode .marketplace-container .supplier-stats {
+    background: #0F172A;
+}
+
+.marketplace-container .supplier-product-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #E8E8E8;
+}
+
+.dark-mode .marketplace-container .supplier-product-item {
+    border-bottom-color: #334155;
+}
+
+.marketplace-container .supplier-product-item:last-child {
+    border-bottom: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 480px) {
+    .marketplace-container .marketplace-header {
+        padding: 10px 12px;
+        min-height: 50px;
+    }
+    
+    .marketplace-container .marketplace-header h2 {
+        font-size: 16px;
+    }
+    
+    .marketplace-container .marketplace-header p {
+        font-size: 8px;
+    }
+    
+    .marketplace-container .marketplace-header-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .marketplace-container .marketplace-tab {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    
+    .marketplace-container .products-grid {
+        gap: 10px;
+    }
+    
+    .marketplace-container .product-info {
+        padding: 10px;
+    }
+    
+    .marketplace-container .product-title h4 {
+        font-size: 12px;
+    }
+    
+    .marketplace-container .product-price {
+        font-size: 14px;
+    }
+    
+    .marketplace-container .product-card .btn-whatsapp-buy {
+        padding: 6px;
+        font-size: 10px;
+    }
+    
+    .marketplace-container .category-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+    
+    .marketplace-container .footer-item {
+        padding: 5px 10px;
+        min-width: 45px;
+    }
+    
+    .marketplace-container .footer-item i {
+        font-size: 14px;
+    }
+    
+    .marketplace-container .footer-item span {
+        font-size: 8px;
+    }
+    
+    .marketplace-container .premium-supplier-card {
+        padding: 10px;
+    }
+    
+    .marketplace-container .premium-supplier-avatar {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 22px;
+    }
+    
+    .marketplace-container .premium-supplier-content h4 {
+        font-size: 12px;
+    }
+    
+    .marketplace-container .premium-supplier-card .btn-whatsapp-buy {
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    
+    .marketplace-container .cart-item-image {
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+    }
+    
+    .marketplace-container .cart-qty-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+    
+    .marketplace-container .cart-checkout-btn {
+        padding: 11px;
+        font-size: 13px;
+    }
+    
+    .marketplace-container .modal-header {
+        padding: 10px 14px;
+    }
+    
+    .marketplace-container .modal-header h3 {
+        font-size: 15px;
+    }
+    
+    .marketplace-container .modal-close {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .marketplace-container .modal-body {
+        padding: 14px;
+    }
+    
+    .marketplace-container .modal-actions {
+        padding: 10px 14px 18px;
+    }
+    
+    .marketplace-container .detail-row {
+        font-size: 12px;
+    }
+    
+    .marketplace-container .quantity-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+    
+    .marketplace-container .quantity-input {
+        width: 65px;
+        height: 34px;
+        font-size: 13px;
+    }
+    
+    .marketplace-container .total-price span:last-child {
+        font-size: 16px;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ==================== KARYAWAN CARD - PERBAIKAN TAMPILAN ==================== */
+
+/* Card Karyawan */
+.karyawan-card {
+    background: var(--surface);
+    border-radius: 16px;
+    margin-bottom: 12px;
+    padding: 16px;
+    border: 1px solid var(--border-light);
+    transition: all 0.2s ease;
+}
+
+.karyawan-card:active {
+    transform: scale(0.99);
+}
+
+/* Header Karyawan (Nama + Status) */
+.karyawan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.karyawan-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.karyawan-avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.karyawan-avatar i {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.karyawan-detail {
+    flex: 1;
+}
+
+.karyawan-nama {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.karyawan-jabatan {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.karyawan-jabatan i {
+    font-size: 10px;
+    color: var(--primary);
+}
+
+/* Status Badge */
+.karyawan-status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.karyawan-status-hadir {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.karyawan-status-izin {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+.karyawan-status-sakit {
+    background: #8B5CF615;
+    color: #8B5CF6;
+}
+
+.karyawan-status-belum {
+    background: #EF444415;
+    color: #EF4444;
+}
+
+/* Tombol Aksi Edit & Hapus */
+.karyawan-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Info Gaji & Shift */
+.karyawan-stats {
+    display: flex;
+    gap: 12px;
+    background: var(--surface-hover);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.karyawan-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.karyawan-stat-item i {
+    font-size: 12px;
+}
+
+.karyawan-stat-item .gaji {
+    color: #10B981;
+    font-weight: 600;
+}
+
+.karyawan-stat-item .shift-pagi {
+    color: #F59E0B;
+}
+
+.karyawan-stat-item .shift-siang {
+    color: #8B5CF6;
+}
+
+.karyawan-stat-item .shift-malam {
+    color: #0284C7;
+}
+
+/* Footer Karyawan (Kontak + Absensi) */
+.karyawan-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.karyawan-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.karyawan-phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.karyawan-phone i {
+    color: var(--primary);
+    font-size: 11px;
+}
+
+/* WhatsApp Button */
+.btn-wa-small {
+    background: #25D366;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.btn-wa-small:active {
+    transform: scale(0.95);
+}
+
+/* Tombol Absensi Group */
+.karyawan-absen-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-absen {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-absen:active {
+    transform: scale(0.92);
+}
+
+.btn-absen-hadir {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.btn-absen-izin {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+.btn-absen-sakit {
+    background: #8B5CF615;
+    color: #8B5CF6;
+}
+
+/* Ringkasan Absensi Hari Ini */
+.absensi-summary-card {
+    display: flex;
+    gap: 16px;
+    justify-content: space-around;
+    background: var(--surface-hover);
+    border-radius: 16px;
+    padding: 16px 12px;
+    margin-bottom: 16px;
+}
+
+.absensi-summary-item {
+    text-align: center;
+    flex: 1;
+}
+
+.absensi-summary-value {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.absensi-summary-label {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+}
+
+/* Empty State Karyawan */
+.karyawan-empty-state {
+    text-align: center;
+    padding: 48px 24px;
+}
+
+.karyawan-empty-icon {
+    font-size: 56px;
+    color: var(--text-tertiary);
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+/* Dark Mode Support */
+.dark-mode .karyawan-stats {
+    background: #0F172A;
+}
+
+.dark-mode .btn-absen-hadir {
+    background: #10B98120;
+}
+
+.dark-mode .btn-absen-izin {
+    background: #F59E0B20;
+}
+
+.dark-mode .btn-absen-sakit {
+    background: #8B5CF620;
+}
+
+/* ==================== TOMBOL ABSENSI - GROUP TENGAH ==================== */
+
+.absensi-button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+}
+
+.absensi-button-wrapper {
+    display: flex;
+    gap: 20px;
+    background: var(--surface-hover);
+    padding: 8px 24px;
+    border-radius: 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-absen {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.btn-absen:active {
+    transform: scale(0.88);
+}
+
+.btn-absen-hadir {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.btn-absen-hadir:active {
+    background: #10B98130;
+}
+
+.btn-absen-izin {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+.btn-absen-izin:active {
+    background: #F59E0B30;
+}
+
+.btn-absen-sakit {
+    background: #8B5CF615;
+    color: #8B5CF6;
+}
+
+.btn-absen-sakit:active {
+    background: #8B5CF630;
+}
+
+.btn-absen i {
+    font-size: 20px;
+}
+
+/* Dark mode */
+.dark-mode .absensi-button-wrapper {
+    background: #0F172A;
+}
+
+/* ==================== TRANSAKSI CARD STYLE ==================== */
+
+/* Card transaksi */
+.transaksi-card {
+    margin-bottom: 16px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.transaksi-card:active {
+    transform: scale(0.99);
+}
+
+/* Header transaksi */
+.transaksi-header {
+    padding: 14px 14px 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Icon circle */
+.transaksi-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--primary-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.transaksi-icon i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+/* Info utama */
+.transaksi-info {
+    flex: 1;
+}
+
+.transaksi-no-faktur {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.transaksi-meta {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.transaksi-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Badge metode pembayaran */
+.transaksi-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.badge-tunai {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.badge-transfer {
+    background: #0284C715;
+    color: #0284C7;
+}
+
+.badge-kredit {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+/* Info bar (pembeli, item, berat) */
+.transaksi-info-bar {
+    margin: 0 14px 12px 14px;
+    padding: 10px 12px;
+    background: var(--surface-hover);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.transaksi-info-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.transaksi-info-detail span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.transaksi-total {
+    font-size: 16px;
+    font-weight: 800;
+    color: #10B981;
+    background: #10B98110;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Preview items */
+.transaksi-items-preview {
+    margin: 0 14px 12px 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.transaksi-item-chip {
+    background: var(--surface-elevated);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+}
+
+.transaksi-item-more {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    padding: 4px 8px;
+}
+
+/* Tombol aksi group */
+.transaksi-actions {
+    display: flex;
+    gap: 10px;
+    padding: 12px 14px 14px 14px;
+    border-top: 1px solid var(--border-light);
+    margin-top: 4px;
+    justify-content: flex-end;
+}
+
+/* Tombol aksi individual */
+.transaksi-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 6px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.transaksi-btn:active {
+    transform: scale(0.95);
+}
+
+.btn-invoice {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.btn-resi {
+    background: #0284C715;
+    color: #0284C7;
+}
+
+.btn-edit-transaksi {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+.btn-hapus-transaksi {
+    background: #EF444415;
+    color: #EF4444;
+}
+
+/* Search container */
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    font-size: 14px;
+}
+
+.search-input {
+    padding-left: 40px;
+    width: 100%;
+}
+
+.search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-tertiary);
+}
+
+/* Empty state */
+.empty-state-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: var(--text-tertiary);
+    opacity: 0.5;
+}
+
+.empty-state-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.empty-state-desc {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+}
+
+/* Dark mode support */
+.dark-mode .transaksi-info-bar {
+    background: #0F172A;
+}
+
+.dark-mode .transaksi-item-chip {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+.dark-mode .btn-invoice {
+    background: #10B98120;
+}
+
+.dark-mode .btn-resi {
+    background: #0284C720;
+}
+
+.dark-mode .btn-edit-transaksi {
+    background: #F59E0B20;
+}
+
+.dark-mode .btn-hapus-transaksi {
+    background: #EF444420;
+}
+
+/* Responsive untuk mobile kecil */
+@media (max-width: 480px) {
+    .transaksi-info-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .transaksi-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .transaksi-btn {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    
+    .transaksi-total {
+        font-size: 14px;
+        align-self: flex-start;
+    }
+}
+
+/* Hover effect untuk desktop */
+@media (hover: hover) {
+    .transaksi-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-light);
+    }
+    
+    .transaksi-btn:hover {
+        transform: translateY(-1px);
+    }
+    
+    .btn-invoice:hover {
+        background: #10B981;
+        color: white;
+    }
+    
+    .btn-resi:hover {
+        background: #0284C7;
+        color: white;
+    }
+    
+    .btn-edit-transaksi:hover {
+        background: #F59E0B;
+        color: white;
+    }
+    
+    .btn-hapus-transaksi:hover {
+        background: #EF4444;
+        color: white;
+    }
+}
+
+/* Tombol aksi dengan GRID - lebih rapi */
+.transaksi-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px 14px 14px 14px;
+    border-top: 1px solid var(--border-light);
+    margin-top: 4px;
+}
+
+.transaksi-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+    .transaksi-actions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .transaksi-btn {
+        padding: 8px 4px;
+        font-size: 10px;
+    }
+}
+
+/* ==================== KESEHATAN CARD STYLE ==================== */
+
+/* Card Stok Obat & Obat Terpakai */
+.obat-card,
+.penyakit-card {
+    margin-bottom: 12px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.obat-card:active,
+.penyakit-card:active {
+    transform: scale(0.99);
+}
+
+/* Header card */
+.obat-header,
+.penyakit-header {
+    padding: 14px 14px 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Icon lingkaran */
+.obat-icon,
+.penyakit-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--primary-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.obat-icon i,
+.penyakit-icon i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+/* Info utama */
+.obat-info,
+.penyakit-info {
+    flex: 1;
+}
+
+.obat-nama,
+.penyakit-nama {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.obat-meta,
+.penyakit-meta {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.obat-meta span,
+.penyakit-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Stok badge */
+.stok-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stok-cukup {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.stok-menipis {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+.stok-habis {
+    background: #EF444415;
+    color: #EF4444;
+}
+
+/* Info bar (stok, harga, dll) */
+.obat-stats,
+.penyakit-stats {
+    margin: 0 14px 12px 14px;
+    padding: 10px 12px;
+    background: var(--surface-hover);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.obat-stats-detail,
+.penyakit-stats-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.obat-stats-detail span,
+.penyakit-stats-detail span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.obat-total-harga {
+    font-size: 16px;
+    font-weight: 800;
+    color: #10B981;
+    background: #10B98110;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Badge tingkat penyakit */
+.badge-ringan {
+    background: #10B98115;
+    color: #10B981;
+}
+
+.badge-sedang {
+    background: #F59E0B15;
+    color: #F59E0B;
+}
+
+.badge-berat {
+    background: #EF444415;
+    color: #EF4444;
+}
+
+/* Tombol aksi group */
+.obat-actions,
+.penyakit-actions {
+    display: flex;
+    gap: 8px;
+    padding: 12px 14px 14px 14px;
+    border-top: 1px solid var(--border-light);
+    margin-top: 4px;
+    justify-content: flex-end;
+}
+
+/* Tindakan card */
+.tindakan-card {
+    margin: 0 14px 12px 14px;
+    padding: 8px 12px;
+    background: var(--surface-elevated);
+    border-radius: 10px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-light);
+}
+
+.tindakan-card i {
+    margin-right: 6px;
+    color: var(--primary);
+}
+
+/* Empty state kesehatan */
+.empty-state-kesehatan {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-state-kesehatan i {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: var(--text-tertiary);
+    opacity: 0.5;
+}
+
+.empty-state-kesehatan p {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+}
+
+/* Dark mode support */
+.dark-mode .obat-stats,
+.dark-mode .penyakit-stats {
+    background: #0F172A;
+}
+
+.dark-mode .tindakan-card {
+    background: #1E293B;
+    border-color: #334155;
+}
+
+/* Hover effect desktop */
+@media (hover: hover) {
+    .obat-card:hover,
+    .penyakit-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-light);
+    }
+}
+
+/* ==================== BIAYA PRODUKSI CARD STYLE ==================== */
+
+/* Card biaya */
+.biaya-card {
+    margin-bottom: 12px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.biaya-card:active {
+    transform: scale(0.99);
+}
+
+/* Header biaya */
+.biaya-header {
+    padding: 14px 14px 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Icon lingkaran */
+.biaya-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.biaya-icon i {
+    font-size: 20px;
+}
+
+/* Info biaya */
+.biaya-info {
+    flex: 1;
+}
+
+.biaya-kategori {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.biaya-meta {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.biaya-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Detail biaya (jumlah) */
+.biaya-detail {
+    margin: 0 14px 12px 14px;
+    padding: 10px 12px;
+    background: var(--surface-hover);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.biaya-jumlah {
+    font-size: 16px;
+    font-weight: 800;
+    background: #10B98110;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Progress bar komposisi biaya */
+.biaya-progress-item {
+    margin-bottom: 12px;
+}
+
+.biaya-progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.biaya-progress-label span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.biaya-progress-bar {
+    height: 8px;
+    background: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.biaya-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Ringkasan biaya card */
+.biaya-summary-card {
+    flex: 1;
+    background: var(--surface-hover);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.biaya-summary-card:active {
+    transform: scale(0.98);
+}
+
+.biaya-summary-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.biaya-summary-label {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: 4px;
+}
+
+.biaya-summary-value {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Hover effect desktop */
+@media (hover: hover) {
+    .biaya-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-light);
+    }
+    
+    .biaya-summary-card:hover {
+        transform: translateY(-2px);
+        background: var(--primary-soft);
+    }
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+    .biaya-summary-value {
+        font-size: 14px;
+    }
+    
+    .biaya-jumlah {
+        font-size: 13px;
+    }
+    
+    .biaya-kategori {
+        font-size: 13px;
+    }
+}
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+input, .form-input, button, .btn-icon {
+    transition: none !important;
+    transform: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
